@@ -27,6 +27,7 @@ def birthday(request, pk=None):
     # Сохраняем данные, полученные из формы, и отправляем ответ:
     if form.is_valid():
         form.save()
+        # ---- birthday_date = form.cleaned_data['birthday']
         birthday_countdown = calculate_birthday_countdown(
             form.cleaned_data['birthday']
         )
